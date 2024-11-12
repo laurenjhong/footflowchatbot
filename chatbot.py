@@ -13,7 +13,7 @@ def get_chatbot_response(user_input):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=messages,
-        max_tokens=200,
+        max_tokens=600,
         temperature=0.7
     )
     return response.choices[0].message['content'].strip()
