@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # Set up OpenAI API
-openai.api_key = 'api-key'
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 def get_chatbot_response(user_input):
     messages = [
